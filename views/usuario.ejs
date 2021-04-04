@@ -66,24 +66,15 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg  sticky-top navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg  sticky-top navbar-dark bg-success">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><strong> <i class="fa fa-rebel" aria-hidden="true"></i> SISTEMA
-                    BASE</strong></a>
+            <a class="navbar-brand" href="/"><strong> <i class="fa fa-money" aria-hidden="true"></i> Subastas Coding Dojo</strong></a>
     
     
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/admin">Administrador</a>
-                    </li>
-                </ul>
-            </div>
     
             <a class="navbar-brand">Bienvenido, <%=user.name%></a>
             <div class="nav navbar-nav navbar-right">
@@ -96,47 +87,50 @@
     <h1>Bid Now!</h1>
 
     
-    <form action="/pujas" method="POST" id="form-bids" class="mt-4">
+    <div class="row">
+        
+            <div class="col-4">
+                <form action="/pujas" method="POST" id="form-bids" class="mt-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="EY3709-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <input type="number" id="" name="bet" placeholder="Oferte aquí">
+                            <input type="hidden" name="product" value="1">
+                            <button type="submit" class="btn btn-success">Bid!</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-        <div class="bids">
-            <div class="row">
-                <div class="card col-4" style="width: 18rem;">
-                    <img src="EY3709-1.jpg" class="card-img-top" alt="...">
+        
+        <div class="col-4">
+            <form action="/pujas" method="POST" id="form-bids" class="mt-4">          
+                <div class="card" style="width: 18rem;">
+                    <img src="polera-universidad-de-chile-adidas.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <input type="number" id="" name="bet" placeholder="Oferte aquí">
-                      <input type="hidden" name="product" value="1">
-                      <button type="submit" class="btn btn-primary">Bid!</button>
+                        <input type="number" id="" name="bet" placeholder="Oferte aquí">
+                        <input type="hidden" name="product" value="2">
+                        <button type="submit" class="btn btn-success">Bid!</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </form>
-
-    <form action="/pujas" method="POST" id="form-bids" class="mt-4">
-        
-        <div class="card col-4" style="width: 18rem;">
-            <img src="polera-universidad-de-chile-adidas.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <input type="number" id="" name="bet" placeholder="Oferte aquí">
-                <input type="hidden" name="product" value="2">
-                <button type="submit" class="btn btn-primary">Bid!</button>
-            </div>
-        </div>
-    </form>
-
-    <form action="/pujas" method="POST" id="form-bids" class="mt-4">
-        
-                <div class="card col-4" style="width: 18rem;">
+    
+        <div class="col-4">
+            <form action="/pujas" method="POST" id="form-bids" class="mt-4">           
+                <div class="card" style="width: 18rem;">
                     <img src="Completo_italiano.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <input type="number" id="" name="bet" placeholder="Oferte aquí">
-                      <input type="hidden" name="product" value="3">
-                      <button type="submit" class="btn btn-primary">Bid!</button>
+                        <input type="number" id="" name="bet" placeholder="Oferte aquí">
+                        <input type="hidden" name="product" value="3">
+                        <button type="submit" class="btn btn-success">Bid!</button>
                     </div>
                 </div>
-    </form>
-
-
+            </form>
+        </div>
+    </div>
+    
+    
           
         <p class="mt-4">Bid amount should be higher than the previous bid!</p>
 
@@ -224,13 +218,12 @@
         </div>
 
         <a href="/pujas">
-            <button type="button" class="btn btn-success mt-4">End Bid!</button>
+            <button type="button" class="btn btn-danger mt-4">End Bid!</button>
         </a>
           
 
 
 
-    </div>
     
 
 
